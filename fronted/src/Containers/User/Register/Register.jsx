@@ -1,8 +1,8 @@
 import React from 'react'
 import { Form, Input, Button, notification } from 'antd';
-import './login.scss';
-import axios from 'axios';
+import './Register.scss';
 import { API_URL } from '../../../api-config';
+import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 const layout = {
     labelCol: { span: 8 },
@@ -11,26 +11,29 @@ const layout = {
 const tailLayout = {
     wrapperCol: { offset: 8, span: 16 },
 };
-const Login = () => {
+const Register = () => {
     const history = useHistory();//props.history
     const onFinish = user => {
-        axios.post(API_URL + '/users/login', user)
-            .then(res => {//como subscribe en angular
-                localStorage.setItem('authToken',res.data.token)//guardamos el token en localstorage
-                notification.success({ message: 'Usuario conectado éxito' });
-                history.push('/')//this.router.navigate(['/login]) en angular
+        axios.post(API_URL + '/users/register', user)
+            .then(() => {//como subscribe en angular
+                notification.success({ message: 'Usuario creado con éxito' });
+                history.push('/login')//this.router.navigate(['/login]) en angular
             })
             .catch(console.error)
     };
     return (
-        <div className="loginContainer">
+        <div className="registerContainer">
             <Form
-                className="loginForm"
+                className="registerForm"
                 {...layout}
-                // name="basic"
-                // initialValues={{email:'yo@yo.yo', password: '12345' }}
                 onFinish={onFinish}
                 onFinishFailed={console.error} >
+                <Form.Item
+                    label="Nombre"
+                    name="name"
+                >
+                    <Input />
+                </Form.Item>
                 <Form.Item
                     label="Email"
                     name="email"
@@ -49,11 +52,11 @@ const Login = () => {
 
                 <Form.Item {...tailLayout}>
                     <Button type="primary" htmlType="submit">
-                        Conectarse
+                        Darse de alta
           </Button>
                 </Form.Item>
             </Form>
         </div>
     );
 }
-export default Login;
+export default Register;
