@@ -8,10 +8,16 @@
         color: black;
         font-family: cursive;
     }
+    input{
+        color: black;
+    }
     div{
         padding: 1px;
     }
     button{
-        color: black;
+        background-color: $ROJOPASION;
+        color: white;
+        font-family: cursive;
+        border-radius: 5px;
     }
 }

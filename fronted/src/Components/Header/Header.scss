@@ -1,11 +1,16 @@
 @import '../../colors.scss';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: $darkblue;
+    background-color:$NEGRO;
     color: $white;
     font-size: 1rem;
+    font-family: cursive;
     .guestZone {
+        display: flex;
+    }
+    .guestZone1 {
         display: flex;
     }
     a {
@@ -14,10 +19,49 @@
         cursor: pointer;
         transition: all 0.8s;
         &:hover {
-            background-color: $lightblue;
+            background-color: $ROJOPASION;
         }
         &.active {
-            background-color: $lightblue;
+            background-color: $ROJOPASION;
         }
     }
+    .logo{
+        height: 4em;
+        justify-content: center;
+        
+    }
+    .search {
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-left: 10px;
+        margin-top: 14px;
+      }
+      
+      .searchTerm {
+        width: 100%;
+        border: 2px solid  $ROJOPASION;
+        border-right: none;
+        padding: 5px;
+        height: 36px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: rgb(255, 255, 255);
+      }
+      
+      .searchTerm:focus{
+        color: rgb(0, 0, 0);
+      }
+      
+      .searchButton {
+        width: 40px;
+        height: 36px;
+        border: 1px solid $ROJOPASION;
+        background: $ROJOPASION;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 22px;
+      }
 }

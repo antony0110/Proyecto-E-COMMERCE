@@ -1,0 +1,9 @@
+@import '../../colors.scss';
+.footer {
+    position:absolute;
+    bottom: 2px;
+    background-color:$NEGRO;
+    color: $white;
+    font-size: 1rem;
+    font-family: cursive;
+}

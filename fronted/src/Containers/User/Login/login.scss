@@ -5,10 +5,15 @@
     justify-content: center;
     align-items: center;
     border-radius: black 2em;
+    color:black;
 
     div{
 padding-top: 2px;
 
+
+    }
+    input{
+        color: black;
     }
     label {
         color:black;
@@ -16,7 +21,10 @@ padding-top: 2px;
 
 }
 button{
-    color:black;
+    background-color: $ROJOPASION;
+    color: white;
+    font-family: cursive;
+    border-radius: 5px;
 }
 
 }
