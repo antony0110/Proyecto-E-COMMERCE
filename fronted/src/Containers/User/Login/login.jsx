@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form, Input, Button, notification } from 'antd';
+//import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import './login.scss';
 import axios from 'axios';
 import { API_URL } from '../../../api-config';
@@ -27,8 +28,6 @@ const Login = () => {
             <Form
                 className="loginForm"
                 {...layout}
-                // name="basic"
-                // initialValues={{email:'yo@yo.yo', password: '12345' }}
                 onFinish={onFinish}
                 onFinishFailed={console.error} >
                 <Form.Item
@@ -53,6 +52,7 @@ const Login = () => {
           </Button>
                 </Form.Item>
             </Form>
+            
         </div>
     );
 }

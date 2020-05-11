@@ -1,10 +1,17 @@
 @import '../../../colors.scss';
 .registerContainer {
-    padding: 1.2em;
+    padding: 4.2em;
     display: flex;
     justify-content: center;
     align-items: center;
     label {
+        color: black;
+        font-family: cursive;
+    }
+    div{
+        padding: 1px;
+    }
+    button{
         color: black;
     }
 }

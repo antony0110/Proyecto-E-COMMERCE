@@ -14,7 +14,7 @@ const tailLayout = {
 const Register = () => {
     const history = useHistory();//props.history
     const onFinish = user => {
-        axios.post(API_URL + '/users/register', user)
+        axios.post(API_URL + '/users/Register', user)
             .then(() => {//como subscribe en angular
                 notification.success({ message: 'Usuario creado con éxito' });
                 history.push('/login')//this.router.navigate(['/login]) en angular
@@ -29,8 +29,8 @@ const Register = () => {
                 onFinish={onFinish}
                 onFinishFailed={console.error} >
                 <Form.Item
-                    label="Nombre"
-                    name="name"
+                    label="Username"
+                    name="Username"
                 >
                     <Input />
                 </Form.Item>
@@ -57,6 +57,7 @@ const Register = () => {
                 </Form.Item>
             </Form>
         </div>
+    
     );
 }
 export default Register;

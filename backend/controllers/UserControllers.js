@@ -8,7 +8,15 @@ const UserController = {
             const hash = await bcrypt.hash(req.body.password, 9); //generamos hash a partir de la contraseña
             req.body.password = hash; //sobreescribimos la propiedad password con el hash obtenido
             req.body.role = "user";
-            const user = await UserModel.create(req.body); //creamos el usuario a partir del email y el hash suministrados en mongoDB
+            let bodyData = req.body;
+		
+            const user = await new UserModel({
+                username: bodyData.username,
+                email: bodyData.email, 
+                password: bodyData.password,  
+            }).save();
+           // console.log(req.body);
+//const user = await UserModel.create(req.body); //creamos el usuario a partir del email y el hash suministrados en mongoDB
             res.status(201).send({
                 message: 'User successfully created',
                 user
@@ -22,6 +30,7 @@ const UserController = {
     },
     async login(req, res) {
         try {
+            console.log(req.body);
             const user = await UserModel.findOne({ //buscamos el usuario por el email, ej: 'user@email.com'
                 email: req.body.email
             });
