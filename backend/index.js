@@ -2,9 +2,10 @@ const express = require ('express');
 const mongoose = require ('mongoose');
 const morgan = require('morgan');
 const app = express();
-const PORT = 3001;
+const PORT = 4000;
 const cors = require('cors');
 const usersRouter = require('./routes/users.js');
+const productsRouter = require('./routes/products.js');
  
 mongoose.connect('mongodb://localhost:27017/ECOMMERCE',{
 useCreateIndex:true,
@@ -24,4 +25,5 @@ app.use(function(req, res, next) {
 app.use(express.json());
 app.use(morgan ('dev'));
 app.use('/users', usersRouter);
+app.use('/products', productsRouter);
 app.listen(PORT, () => console.log('server running on port' + PORT));
