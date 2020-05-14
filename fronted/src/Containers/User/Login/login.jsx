@@ -2,9 +2,8 @@ import React from 'react'
 import { Form, Input, Button, notification } from 'antd';
 //import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import './login.scss';
-import axios from 'axios';
-import { API_URL } from '../../../api-config';
 import { useHistory } from 'react-router-dom';
+import { login } from '../../../redux/action';
 const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
@@ -15,9 +14,8 @@ const tailLayout = {
 const Login = () => {
     const history = useHistory();//props.history
     const onFinish = user => {
-        axios.post(API_URL + '/users/login', user)
-            .then(res => {//como subscribe en angular
-                localStorage.setItem('authToken',res.data.token)//guardamos el token en localstorage
+        login(user)
+            .then(()=>{//como subscribe en angular
                 notification.success({ message: 'Usuario conectado éxito' });
                 history.push('/')//this.router.navigate(['/login]) en angular
             })

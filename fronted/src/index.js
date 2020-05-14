@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
 import App from './App';
+import { Provider } from "react-redux";
+import store from './redux/store';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>
+</React.StrictMode>,
+document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

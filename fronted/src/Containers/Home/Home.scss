@@ -1,16 +1,55 @@
-  
+@import '../../colors.scss';
+body{
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-transparente-videojuegos_6997-1230.jpg?size=626&ext=jpg);
+}
+  p{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.842) ;
+    color: black;
+    font-size: 15px;
+    font-family: cursive;
+    margin-top: 10px;
+
+  }
 .products {
     display: grid;
     grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+    width: 90%;
+    max-width: 1400px;
+    margin: auto; 
+    position: relative;
+    /*overflow: hidden  ; */
     .product {
         display: inline-flex;
+        justify-content: space-between;
+        margin-top: 46px;
         cursor: pointer;
         flex-direction: column;
         padding: 0.5em;
         justify-content: space-between;
         align-items: center;
+        color: black;
+        transition: all 0.5s;
+        position: relative;
+        overflow: hidden  ; 
         img {
-            max-width: 80%;
+            width: 300px;
+            height: 350px;
+            margin: 2px;
+            transition: all 0.5s;
+            border-radius: 6px;
         }
+        
     }
+    .product:hover {
+        transform: translateY(0%);
+    }
+    
+    .product:hover {
+        transform: scale(1.20);
+    }
+ 
 }

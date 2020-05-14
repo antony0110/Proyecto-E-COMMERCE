@@ -14,7 +14,7 @@ const tailLayout = {
 const Register = () => {
     const history = useHistory();//props.history
     const onFinish = user => {
-        axios.post(API_URL + '/users/Register', user)
+        axios.post(API_URL + '/user/Register', user)
             .then(() => {//como subscribe en angular
                 notification.success({ message: 'Usuario creado con éxito' });
                 history.push('/login')//this.router.navigate(['/login]) en angular
