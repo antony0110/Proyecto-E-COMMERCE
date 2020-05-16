@@ -64,7 +64,16 @@ const UserController = {
                 message: 'There was a problem trying to log in'
             })
         }
-    }
+    },
+   
+    logout(req, res) {
+        UserModel.findByIdAndUpdate(req.user._id, {
+                $pull: {
+                    tokens: req.headers.authorization
+                }
+            }).then(user => res.send(user))
+            .catch(console.error)
+    },
 }
 
 module.exports = UserController;

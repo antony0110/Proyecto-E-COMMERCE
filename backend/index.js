@@ -3,7 +3,6 @@ const mongoose = require ('mongoose');
 const morgan = require('morgan');
 const app = express();
 const PORT = 4000;
-const cors = require('cors');
 const usersRouter = require('./routes/users.js');
 const productsRouter = require('./routes/products.js');
  
@@ -24,6 +23,6 @@ app.use(function(req, res, next) {
 
 app.use(express.json());
 app.use(morgan ('dev'));
-app.use('/users', usersRouter);
-app.use('/products', productsRouter);
+app.use('/user', usersRouter);
+app.use('/product', productsRouter);
 app.listen(PORT, () => console.log('server running on port' + PORT));

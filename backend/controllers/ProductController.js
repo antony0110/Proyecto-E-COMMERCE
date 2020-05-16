@@ -17,5 +17,14 @@ const ProductController = {
                 res.send(error)
             })
     },
+    getById(req, res) {
+        Product.findById(req.params._id)
+            .populate('userId')
+            .then(product => res.send(product))
+            .catch(error => {
+                console.error(error);
+                res.send(error)
+            })
+    }
 }
 module.exports = ProductController;

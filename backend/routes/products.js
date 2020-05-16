@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const ProductController = require('../controllers/ProductController');
-router.post('/Juego',ProductController.Juego)
-router.get('/Products',ProductController.getAll)
+router.post('/juego',ProductController.Juego)
+router.get('/',ProductController.getAll)
+router.get('/:_id', ProductController.getById);
 
 
 module.exports = router
