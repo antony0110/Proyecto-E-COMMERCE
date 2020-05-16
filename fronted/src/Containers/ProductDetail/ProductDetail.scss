@@ -1,3 +1,4 @@
+@import '../../colors.scss';
 .product {
    
     display: inline-flex;
@@ -5,16 +6,47 @@
    
 
     .detail {
-        background-color: rgb(173, 55, 55);
+        background-color:$ROJOPASION;
         display: flex;
         flex-direction: column;
         font-size: 20px;
-        color: black;
-        font-family: cursive;
-        padding: 20px;
     
+        font-family: cursive;
+        padding: 60px;
+    .cajaNombre{
+    display: flex;
+    width:35em;
+    margin-left: 5em;
+    background-color: black;
+    justify-content: center;
+    border-radius: 4px;
+    }
+    .nombre{
+        color: white;
+        background-color:black;
+    }
+.precio{
+  color: rgb(255, 255, 255);
+  margin-left: 5em;
+  padding:1em;
+}
+.descripcion{
+    color: rgb(255, 255, 255);
+  margin-left: 5em;
+  margin-top: 10px;
+}
+.stock{
+    color: rgb(255, 255, 255);
+    margin-left: 6em;   
+}
     }
     img {
         max-width: 25vw;
+    }
+    .coche{
+        color: rgb(255, 255, 255);
+        margin-left: 5em;
+        font-size: 4em;
+        
     }
 }

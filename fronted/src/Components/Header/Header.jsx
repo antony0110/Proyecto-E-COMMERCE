@@ -4,6 +4,7 @@ import logo from './logo1.png';
 import { NavLink } from 'react-router-dom';
 import { connect } from "react-redux";
 import { ShoppingCartOutlined } from '@ant-design/icons';
+import {SearchOutlined } from '@ant-design/icons';
 import { logout} from "../../redux/action";
 
 const Header = props => {
@@ -14,16 +15,16 @@ const Header = props => {
             <NavLink to="/" exact>Home</NavLink>
            
             <div className="search">
-                <input type="text" className="searchTerm" placeholder="Empieza tu busqueda....."/>
+                <input type="search" onKeyUp={event => props.dispatch({type:'SEARCH',payload:event.target.value})} className="searchTerm" placeholder="Empieza tu busqueda....."/>
                 <button type="submit" className="searchButton">
-                    <i className="fa fa-search"></i>
+                <SearchOutlined />
                 </button>
             </div> 
             </div>
             <img className="logo" src={logo} alt="logo" />           
             {props.user ?
                 <div className="userZone">
-                    <ShoppingCartOutlined className="carro"  /> 
+                <NavLink to="/carrito"><ShoppingCartOutlined className="carro"  /></NavLink>    
                     <a>{props.user.email}</a>
                     <a onClick={logout} > Logout</a>  
                 </div>

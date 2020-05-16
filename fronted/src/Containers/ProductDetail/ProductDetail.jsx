@@ -4,12 +4,16 @@ import axios from "axios";
 import { API_URL } from '../../api-config';
 import './ProductDetail.scss';
 import { ShoppingCartOutlined } from '@ant-design/icons';
+import { NavLink } from 'react-router-dom';
+import { connect } from "react-redux";
 import { addCart } from '../../redux/action';
-export default class ProductDetail extends Component {
+import Product from '../../Components/Product/ProductItem';
+ class ProductDetail extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            product: {}
+            product: {},
+            user:{}
         }
     }
     componentDidMount() {
@@ -22,16 +26,22 @@ export default class ProductDetail extends Component {
             <div className="product">
                     <img src={this.state.product.image_path} alt="" />
                     <div className="detail">
-                        <span>{this.state.product.name}</span>
-                        <span>{this.state.product.price}€</span>
-                        <span>{this.state.product.description}</span>
-                        <span>{this.state.product.stock} unidades</span>
-                        <span>{this.state.product.price}€</span>
-                        <ShoppingCartOutlined className="carrito"  /> 
-                        
-                       
+                        <div className="cajaNombre">
+                        <span className="nombre" >{this.state.product.name}</span>
+                        </div>
+                        <span className="descripcion" >{this.state.product.description}</span>
+                        <span  className="precio">{this.state.product.price}€</span>
+                        <span className className="stock" >{this.state.product.stock} unidades  </span>   
+                        {console.log(this.state.user)}
+                        {this.props.user ?                  
+                        <NavLink to="/carrito"> <ShoppingCartOutlined className="coche" onClick={()=>addCart(Product)}   />  </NavLink>
+                        :
+                        <NavLink to="/login"> <ShoppingCartOutlined className="coche" />  </NavLink>
+    }
                     </div>
             </div>
         )
     }
 }
+   const  mapStateToProps = (state) => ({ user:state.user })
+   export default connect(mapStateToProps)(ProductDetail);

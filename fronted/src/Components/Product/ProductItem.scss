@@ -23,13 +23,15 @@
     bottom: 0;
     padding: 40px;
     font-size: 15px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     transform: translateY(100%);
     transition: all 0.5s ease-out;
+    
 }
 .description,.title,.price {
     transform: translateY(-20%);
 }
 .carrito{
     font-size: 30px;
+    color: white;
 }

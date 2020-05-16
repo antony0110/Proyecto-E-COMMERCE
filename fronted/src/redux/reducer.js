@@ -20,6 +20,16 @@ const reducer = (state = {}, action) => {
                         ...state,
                         cart: []
                     }
+                    case 'GET_ALL_PRODUCTS':
+                        return {
+                            ...state,
+                            products: action.payload
+                        }
+                        case 'SEARCH':
+                        return {
+                            ...state,
+                            search: action.payload
+                        }
                 default:
                     return state;
             }

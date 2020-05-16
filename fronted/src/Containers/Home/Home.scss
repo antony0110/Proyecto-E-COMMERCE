@@ -2,18 +2,25 @@
 body{
     background-image: url(https://img.freepik.com/vector-gratis/fondo-transparente-videojuegos_6997-1230.jpg?size=626&ext=jpg);
 }
-  p{
+::-webkit-scrollbar{
+    background: $NEGRO;
+    width:15px;
+}
+::-webkit-scrollbar-thumb{
+    background: WHITE;
+    border-radius: 2px;
+}
+  .escoge{
     padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 0, 0, 0.842) ;
-    color: black;
+    background-color: $ROJOPASION ;
+    color: rgb(255, 255, 255);
     font-size: 15px;
     font-family: cursive;
     margin-top: 10px;
-
-  }
+}
 .products {
     display: grid;
     grid-template: repeat(4, 1fr)/repeat(4, 1fr);
@@ -21,6 +28,7 @@ body{
     max-width: 1400px;
     margin: auto; 
     position: relative;
+    background-color: rgba(0, 0, 0, 0.733);
     /*overflow: hidden  ; */
     .product {
         display: inline-flex;

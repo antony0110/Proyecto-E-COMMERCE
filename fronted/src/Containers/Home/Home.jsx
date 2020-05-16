@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { API_URL } from '../../api-config';
-import axios from 'axios';
+import React, { useEffect} from 'react'
 import './Home.scss'
 import ProductItem from '../../Components/Product/ProductItem'
-const Home = () => {
-    const [products, setProducts] = useState([])
+import { getAllProducts } from '../../redux/action';
+import { connect } from 'react-redux';
+const Home = (props) => {
     useEffect(() => {
-        axios.get(API_URL + '/product')
-            .then(res => setProducts(res.data))
-            .catch(console.error)
+        getAllProducts()
+        .catch(console.error)
     }, [])
     return (
       
         <div>
-        <p>ESCOGE TU JUEGO FAVORITO</p>
-            <div  className="products">
-            {products.map(product => <ProductItem detailed={false}  key={product._id} product={product}/>)}
+        <p className='escoge'>ESCOGE TU JUEGO FAVORITO</p>
+        <div className="products">
+            {props.products?. filter(product => props.search ? product.name.includes(props.search):true). map(product => <ProductItem key={product._id} product={product}/>)}
             </div>
-          
         </div>
+        
         
     )
 }
-export default Home;
+const mapStateToProps = (state) => ({products:state.products,search:state.search})
+export default connect(mapStateToProps) (Home);

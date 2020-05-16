@@ -28,4 +28,12 @@ export const login = async(user) => {
             payload: product
         })
     }
+    export const getAllProducts = () => {
+        return  axios.get(API_URL + '/product')
+        .then(res => store.dispatch({
+            type:'GET_ALL_PRODUCTS',
+        payload: res.data
+        }))
+
+    }
  

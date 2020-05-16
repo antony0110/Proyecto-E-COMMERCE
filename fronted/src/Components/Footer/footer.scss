@@ -1,12 +1,45 @@
 @import '../../colors.scss';
 
 .footer{
+   background-color:$NEGRO;
     margin-top:7em;
+    height: 15em;
+    .Copy{
+        color: white;
+        display: flex;
+        justify-content: center;
+        .redes{
+            margin-left: 30px;
+            font-size: 20px;
+            top: 2px;
+          
+        }
 }
 
 .Letras {
     background-color:$NEGRO;
-    color: $white;
-    font-size: 1rem;
+    font-size: 1em;
     font-family: cursive;
+    .sobreMi,.contacto,.home {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $ROJOPASION ;
+        color: rgb(255, 255, 255);
+        font-size: 13px;
+        font-family: cursive;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.8s;
+    .sobreMi,.contacto,.home:hover {
+        background-color:$NEGRO;
+    }
+    
+}
+.enlaces{
+    color: white;
+   
+}
+}
 }
