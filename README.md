@@ -45,13 +45,13 @@ _Una vez nos hemos logueado bien no redigera a la home de nuestra pagina web, do
 ### BUSQUEDA
 ![](./FotosReadme/foto5.PNG)
 _En esta foto podemos ver como podemos buscar mediante el buscador el juego que queramos con solo escribir alguna letra que lleve nuestro juego nos lo muestra_
-
+### DETALLE PRODUCTO
 ![](./FotosReadme/foto6.PNG)
 _Aqui podemos ver el juego con su descripcion con el precio y las unidades que quedan y la opcion de comprar, algo que debemos tener en cuenta que a al hora de darle al carrito si no estamos logueado o registrado no nos dejara comprar el producto en este caso el juego._
 
 
 ### CARRITO⌨️
-![](./FotosReadme/foto7.png)
+![](./FotosReadme/foto7.PNG)
 _Aqui podemos ver como se nos ha añadido el juego al carrito, en el cual podemos elegir cuantas unidades queremos llevarnos y darle a comprar o seguir comprando_
 
 
