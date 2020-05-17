@@ -26,7 +26,7 @@ const Header = props => {
                 <div className="userZone">
                 <NavLink to="/carrito"><ShoppingCartOutlined className="carro"  /></NavLink>    
                     <a>{props.user.email}</a>
-                    <a onClick={logout} > Logout</a>  
+                    <NavLink to="/login"><a onClick={logout} > Logout</a>  </NavLink>
                 </div>
                 :
             <div className="guestZone">

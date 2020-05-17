@@ -11,7 +11,9 @@ const Home = (props) => {
     return (
       
         <div>
+            <div className='escogetujuego'>
         <p className='escoge'>ESCOGE TU JUEGO FAVORITO</p>
+        </div>
         <div className="products">
             {props.products?. filter(product => props.search ? product.name.includes(props.search):true). map(product => <ProductItem key={product._id} product={product}/>)}
             </div>

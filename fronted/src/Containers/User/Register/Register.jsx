@@ -47,6 +47,7 @@ const Register = () => {
                     name="password"
                     rules={[{ required: true, message: 'La contraseña es requerida' }]}
                 >
+            
                     <Input.Password />
                 </Form.Item>
 

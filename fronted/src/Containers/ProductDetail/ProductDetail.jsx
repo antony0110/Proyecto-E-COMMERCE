@@ -31,14 +31,21 @@ import Product from '../../Components/Product/ProductItem';
                         </div>
                         <span className="descripcion" >{this.state.product.description}</span>
                         <span  className="precio">{this.state.product.price}€</span>
-                        <span className className="stock" >{this.state.product.stock} unidades  </span>   
+                        <span  className="stock" >{this.state.product.stock} unidades  </span>  
                         {console.log(this.state.user)}
-                        {this.props.user ?                  
+                        {this.props.user ?   
+                        <div className='coches'>  
                         <NavLink to="/carrito"> <ShoppingCartOutlined className="coche" onClick={()=>addCart(Product)}   />  </NavLink>
+                        </div>
                         :
+                        <div className='coches'>  
                         <NavLink to="/login"> <ShoppingCartOutlined className="coche" />  </NavLink>
+                        </div>
+                        
     }
+     
                     </div>
+                  x
             </div>
         )
     }

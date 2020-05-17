@@ -2,6 +2,7 @@ import React from 'react';
 import './footer.scss';
 import {InstagramOutlined} from '@ant-design/icons';
 import {GithubOutlined} from '@ant-design/icons';
+//import { NavLink } from 'react-router-dom';
 import {TwitterOutlined} from '@ant-design/icons';
 import {FacebookOutlined} from '@ant-design/icons';
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="Letras" >
         <p className='sobreMi' >ABOUT ME</p> 
         <p className='contacto'  >CONTACT</p> 
-        <p className='home'  >HOME</p> 
+         <p className='home'>HOME</p>
           </div>
           <div className='Copy'>
          <p className='copyright'> @Copyright Company Antony Gomez Carrasco 

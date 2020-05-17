@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         font-size: 20px;
-    
+         border: 2PX solid $NEGRO;
         font-family: cursive;
         padding: 60px;
     .cajaNombre{
@@ -45,8 +45,12 @@
     }
     .coche{
         color: rgb(255, 255, 255);
-        margin-left: 5em;
+        margin-left: 2em;
         font-size: 4em;
         
+    }
+    .coches{
+     display: flex;
+     justify-content: flex-end;
     }
 }

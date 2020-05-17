@@ -1,0 +1,111 @@
+@import '../../colors.scss';
+::placeholder{
+    color: black;
+}
+.carritocontainer{
+display: flex;
+height: 30em;
+width: auto;
+justify-content: center;
+.pedido{
+    display: flex;
+    width: 80em;
+    justify-content: space-around;
+    background-color: white;
+    border: 2px solid $NEGRO;
+    flex-direction: column;
+}
+.Links {
+    display: flex;
+    width: 1000px;
+    height: 30px;
+    justify-content: space-around;
+    font-family: fantasy;
+    font-size: 20px;
+ 
+    margin-bottom: 14px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    color: $NEGRO;
+    margin-left: 3em;;
+    
+}
+.compra1{
+    display: inline-flex;
+    margin-top: -2em;
+    height: 50%;
+    margin-left: 10em;
+    .numero{
+        margin-left: 7em;
+        display: flex;
+        flex-direction: column;
+        width: 15em;
+        margin-top: 2em;
+        input{
+            color: 4;
+            border: 1px solid $NEGRO;
+     
+        }
+      
+    }
+    .precios{
+        margin-left: 9em;
+        display: flex;
+        flex-direction: column;
+        width: 3em;
+         margin-top: 2em;
+        .precio{
+            font-family: fantasy;
+            color: black;
+            border: 1px solid $NEGRO;
+        }
+    }
+    .total{
+        margin-left: 14em;
+        display: flex;
+        width: 8em;
+        justify-content: flex-end;
+        height: 2em;
+         margin-top: 2em;
+         margin-bottom: 14px;
+        border-bottom: 1px solid rgb(0, 0, 0);
+         .totales{
+            font-family: fantasy;
+            color: black;
+            width: 15em;
+            display: contents;
+            
+         }
+    }
+    .juego1{
+        max-width: 10vw;
+        max-height: 10vw;
+        border:2px solid $NEGRO
+   }
+}
+.botones{
+    margin-left: 5em;
+    margin-right: 4em;
+    display:  flex;
+    justify-content: space-between;
+    .boton1,.boton2{
+        background-color: $ROJOPASION; /* Green */
+        border-radius: 5px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+    }
+          .boton1:hover{
+            box-shadow: 0 12px 16px 0 rgb(0, 0, 0),0 17px 50px 0 rgba(0,0,0,0.19);
+          }
+          
+          .boton2:hover {
+            box-shadow: 0 12px 16px 0 rgb(0, 0, 0),0 17px 50px 0 rgba(0,0,0,0.19);
+          }
+    }
+}
