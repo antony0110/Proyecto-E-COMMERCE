@@ -34,7 +34,7 @@ _Y ahora os voy mostrar algunos aspectos de la pagina_
   
 
 ## Register
-![](./FotosReadme/foto2.png)
+![](./FotosReadme/Register.png)
  _Esta es la pagina del registro en el cual ponemos nuestro username, nuestro correo y nuestra contraseña_
 ## Login
 ![](./FotosReadme/foto3.PNG)
